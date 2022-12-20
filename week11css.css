@@ -10,7 +10,8 @@
 
 #gameContainer{
     font-family: "Permanent Marker", cursive; 
-    text-align: center;   
+    text-align: center;
+    color:white 
 }
 
 #cellContainer{
@@ -18,5 +19,9 @@
     grid-template-columns: repeat(3, auto);
     width: 225px;
     margin:auto;
+}
+
+.background{
+    background-color:darkslategray
 }
 

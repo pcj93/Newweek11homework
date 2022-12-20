@@ -1,7 +1,9 @@
+// what is used to call upon my classes and ID.
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
 
+// what is used to make sure all win condtions are covered.
 const winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -13,14 +15,19 @@ const winConditions = [
     [2, 4, 6]
 ];
 
+// empty spaces to repesent the boxes on the grid.
 let options = ["", "", "", "", "", "", "", "", ""];
+
+// represent player.
 let currentPlayer = "X";
+
+// used to make sure game is running.
 let running = false;
 
-
-
+// used to invoke game like we did on week 6 war card game.
 initializeGame();
 
+// for the start of the game function.
 function initializeGame(){
     cells.forEach(cell => cell.addEventListener("click", cellClicked));
     restartBtn.addEventListener("click", restartGame);
@@ -28,6 +35,7 @@ function initializeGame(){
     running = true;
 }
 
+// for the button used in the game.
 function cellClicked(){
     const cellIndex = this.getAttribute("cellIndex");
 
@@ -40,16 +48,19 @@ function cellClicked(){
 
 }
 
+// function to update cell boxes.
 function updateCell(cell, index){
     options[index] = currentPlayer;
     cell.textContent = currentPlayer;
 }
 
+// function to change player.
 function changePlayer(){
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
     statusText.textContent = `${currentPlayer}'s turn`;
 }
 
+// function to check for a winner or to check if it's a draw.
 function checkWinner(){
 
     let roundWon = false;
@@ -71,8 +82,6 @@ function checkWinner(){
         }
     }
 
-
-
     if(roundWon){
         statusText.textContent = `${currentPlayer} wins!`;
         running = false;
@@ -87,6 +96,7 @@ function checkWinner(){
     }
 }
 
+// function to make sure it changes player.
 function restartGame(){
     currentPlayer = "X";
     options = ["", "", "", "", "", "", "", "", ""];
