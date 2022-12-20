@@ -1,0 +1,22 @@
+{
+  "name": "newweek11hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "week11js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcj93/Newweek11homework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pcj93/Newweek11homework/issues"
+  },
+  "homepage": "https://github.com/pcj93/Newweek11homework#readme",
+  "dependencies": {
+    "jquery": "^3.6.2"
+  }
+}
